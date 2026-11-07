@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello WeatherController!{% endblock %}
+
+{% block body %}
+    <main>
+        <h1>Weather in {{ location.city }}, {{ location.country }}</h1>
+
+        <ul>
+            {% for measurement in measurements %}
+                <li>{{ measurement.date|date('d.m.Y') }}: {{ measurement.celsius }}&deg;C</li>
+            {% endfor %}
+        </ul>
+    </main>
+{% endblock %}
