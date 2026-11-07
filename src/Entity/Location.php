@@ -31,7 +31,7 @@ class Location
     /**
      * @var Collection<int, Measurement>
      */
-    #[ORM\OneToMany(targetEntity: Measurement::class, mappedBy: 'location')]
+    #[ORM\OneToMany(targetEntity: Measurement::class, mappedBy: 'location', cascade: ['remove'])]
     private Collection $measurements;
 
     public function __construct()

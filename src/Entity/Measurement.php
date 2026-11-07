@@ -47,7 +47,7 @@ class Measurement
         return $this->date;
     }
 
-    public function setDate(\DateTime $date): static
+    public function setDate(?\DateTime $date): static
     {
         $this->date = $date;
 
@@ -59,7 +59,7 @@ class Measurement
         return $this->celsius;
     }
 
-    public function setCelsius(string $celsius): static
+    public function setCelsius(?string $celsius): static
     {
         $this->celsius = $celsius;
 
